@@ -57,8 +57,8 @@ app.use('/myindex',(req,res)=>{
 // 通过 req.params 获取路由中的参数
 app.get('/index/:year/:month/:day', function (req, res) {
   // console.log(req.params); // 获取参数
-  // console.log(req.query.name); // 获取问号后的字符串参数
-  res.send(req.params);   
+  // console.log(req.query.name); // 获取？后的字符串参数
+  res.send(req.params);
 });
 
 // 4.启动服务
