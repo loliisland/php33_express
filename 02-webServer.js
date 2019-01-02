@@ -37,6 +37,30 @@ app.get('/register',function (req,res) {
 app.get(/^\/index\d+$/,(req,res)=>{
   res.send('你tm竟然找到我了');
 })
+
+// 1. 在进行路由匹配的时候不限定方法，什么请求方法都可以
+// 2. 请求路径中pathname要求与 path 完全匹配
+// http://localhost:9000/index/		匹配
+// http://localhost:9000/index/a/b/c 	不匹配
+app.all('/all',(req,res)=>{
+  res.send('我是all请求方式');
+})
+
+// 1. 在进行路由匹配的时候不限定方法，什么请求方法都可以
+// 2. 请求路径中pathname第一部分只要与path 匹配即可，并不要求完全匹配
+// http://localhost:9000/index/ 		匹配
+// http://localhost:9000/index/a/b/c 	匹配
+app.use('/myindex',(req,res)=>{
+  res.send('我是use请求方式');
+})
+
+// 通过 req.params 获取路由中的参数
+app.get('/index/:year/:month/:day', function (req, res) {
+  // console.log(req.params); // 获取参数
+  // console.log(req.query.name); // 获取问号后的字符串参数
+  res.send(req.params);   
+});
+
 // 4.启动服务
 app.listen(3000,function () {
   console.log('请访问:http://127.0.0.1:3000');
