@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <h2>name:{{name}}</h2>
+  <h2>age:{{age}}</h2>
+
+  <ul>
+    <!-- 遍历 -->
+    <!-- 语法一: 自定义名 -->
+    {{each imodo v i}}
+    <li>序号：{{i+1}}--乳名：{{v}}</li>
+    {{/each}}
+  </ul>
+  <ul>
+    <!-- 语法二: 不加名字默认要加$ -->
+    {{each imodo}}
+    <li>序号：{{$index}}--乳名：{{$value}}</li>
+    {{/each}}
+  </ul>
+    <p>时间戳：{{time}}</p>
+      <!-- 第一个参数不需要传递默认是当前的time,直接从第二个参数开始传递 -->
+   时间格式为：{{time|dateFormat "YYYY-MM"}}
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "06-express",
+  "version": "1.0.0",
+  "description": "\"# php33_express\"",
+  "main": "01-webServer.js",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-art-template": "^1.0.1",
+    "moment": "^2.23.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loliisland/php33_express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loliisland/php33_express/issues"
+  },
+  "homepage": "https://github.com/loliisland/php33_express#readme"
+}
